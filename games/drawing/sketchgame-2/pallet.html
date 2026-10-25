@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            
+        }
+        .colorBox{
+            width: 200px;
+            height: 150px;
+            --colorPen: black;
+        }
+        .colorCol{
+            width: 200px;
+            display: flex;
+        }
+        .container {
+            width: 50px;
+            height: 50px;
+        }
+        .chosenPen{
+            height: 75px;
+            position: relative;
+            top:-25px
+        }
+        .color {
+            width: 50px;
+            height: 50px;
+            background-image: linear-gradient(90deg,rgba(255, 255, 255, 0)25%,rgba(255, 255, 255,.1)25%,rgba(255, 255, 255,.1)50%,rgba(255, 255, 255,.2)50%,rgba(255, 255, 255,.2)75%,rgba(255, 255, 255,.3)75%);
+            z-index: 1;
+        }
+        .puntaPen {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 25px 50px 25px;
+        }
+        .puntaPen::after{
+            content: "";
+
+        }
+        .colorPen{
+            background: var(--colorPen);
+            background-image: linear-gradient(90deg,rgba(255, 255, 255, 0)25%,rgba(255, 255, 255,.1)25%,rgba(255, 255, 255,.1)50%,rgba(255, 255, 255,.2)50%,rgba(255, 255, 255,.2)75%,rgba(255, 255, 255,.3)75%);
+
+        }
+        .puntaPenColor {
+            border-color: transparent transparent var(--colorPen) transparent;
+        }
+        .bluePen{
+            background-color: blue;
+        }
+        .puntaPenBlue {
+            border-color: transparent transparent blue transparent;
+        }
+        .yellowPen{
+            background-color: yellow;
+        }
+        .puntaPenYellow {
+            border-color: transparent transparent yellow transparent;
+        }
+        .redPen{
+            background-color: red;
+        }
+        .puntaPenRed {
+            border-color: transparent transparent red transparent;
+        }
+        .greenPen{
+            background-color: green;
+        }
+        .puntaPenGreen {
+            border-color: transparent transparent green transparent;
+        }
+        .orangePen{
+            background-color: orange;
+        }
+        .puntaPenOrange {
+            border-color: transparent transparent orange transparent;
+        }
+        .purplePen{
+            background-color: purple;
+        }
+        .puntaPenPurple {
+            border-color: transparent transparent purple transparent;
+        }
+        .trapezoid {
+            position:relative;
+            top: -90px;
+            border-bottom: 40px solid darkorange;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            height: 0;
+            width: 10px;
+        }
+        .chosenPenTrap{
+            top: -90px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="colorBox">
+        <div class="colorCol">
+            <div class="container">
+                <div class="puntaPen puntaPenOrange"></div>
+                <div class="color orangePen"></div>
+                <div class="trapezoid"></div>
+            </div>
+            <div class="container">
+                <div class="puntaPen puntaPenGreen"></div>
+                <div class="color greenPen"></div>
+                <div class="trapezoid"></div>
+            </div>
+            <div class="container">
+                <div class="puntaPen puntaPenPurple"></div>
+                <div class="color purplePen"></div>
+                <div class="trapezoid"></div>
+            </div>
+        </div>
+        <div class="colorCol">
+            <div class="container">
+                <div class="puntaPen puntaPenRed"></div>
+                <div class="color redPen"></div>
+                <div class="trapezoid"></div>
+            </div>
+            <div class="container">
+                <div class="puntaPen puntaPenYellow"></div>
+                <div class="color yellowPen"></div>
+                <div class="trapezoid"></div>
+            </div>
+            <div class="container">
+                <div class="puntaPen puntaPenBlue"></div>
+                <div class="color bluePen"></div>
+                <div class="trapezoid"></div>
+            </div>
+            <div class="container chosenPen">
+                <div class="puntaPen puntaPenColor"></div>
+                <div class="color colorPen"></div>
+                <div class="trapezoid chosenPenTrap"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

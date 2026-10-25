@@ -1,0 +1,97 @@
+
+.pageContainer {
+    padding: 10px;
+    width: 95%;
+    min-width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(3,auto)/1fr;
+    grid-gap: 20px;
+    grid-template-areas: "mediaadd"
+    "mediahead"
+    "mockup";
+}
+.richmediaTop {
+    grid-area: mediaadd;
+}
+.header {
+    display: grid;
+    grid-template: 50px , 50px/ repeat(5,20%);
+    grid-template-areas: ". . . logo ."
+                        "menu menu menu menu menu";   
+    grid-gap: 20px;
+    background-color: #052557;
+    grid-area: mediahead;
+}
+.logo {
+    grid-area: logo;
+    width: 400px;
+    height: 100px;
+    background-image: url(mockupimg/guardian.svg);
+    background-repeat: no-repeat;
+    grid-row-end: logo;
+    margin-top: 20px;
+}
+
+.menu {
+    grid-area: menu;
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.menu div {
+    width: 20%;
+    height: 30px;
+    border: solid 0.3px white;
+    border-bottom: none;
+    margin: 0px;
+    color: white;
+}
+
+.block1 {
+    display: flex;
+    justify-content: space-between;
+}
+.block1 div {
+    width: 31%;
+    height: 400px;
+}
+
+
+.mocktextcol {
+    background-color: darkgray;
+}
+.mockmidcol {
+    display: flex;
+    flex-direction: column;
+}
+.mockmidcol div {
+    background-color: darkgray;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mockaddcol div {
+    width: 100%;
+    height: 45%;
+    margin-bottom: 10%;
+}   
+.richmediapushdown {
+    z-index: 1;
+    background-color: darkgrey;
+}
+.rickmediaback {
+    z-index: -3;
+}
+
+.block2 {
+    width: 100%;
+    height: 150px;
+    background-color: darkgray;
+    margin: 10px 0;
+}
+.celponeframe {
+    display: none;
+}

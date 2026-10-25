@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.richmediaTop {
+    margin: auto;
+    width: auto;
+    grid-area: mediaadd;
+}
+
+.mediapage {
+    display: grid;
+    grid-template: repeat(3,1fr)/1fr;
+    grid-gap: 20px;
+}
+.choose {
+    width: 300px;
+    margin: auto;
+}
